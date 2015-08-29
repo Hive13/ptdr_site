@@ -1,6 +1,6 @@
 set :application, 'pdtr_hive13_org'
 set :repo_url, 'git@github.com:Hive13/ptdr_site.git'
-set :deploy_to, '/var/www/rails/ptdr_hive13_org'
+set :deploy_to, '/var/www/ptdr.iwcg.net'
 
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -24,6 +24,9 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
+      print "Creating /tmp directory"
+      run "mkdir -p tmp"
+
       execute :touch, release_path.join('tmp/restart.txt')
     end
   end
