@@ -24,8 +24,7 @@ set :bundle_roles, :all
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # set :keep_releases, 5
 
-set :linked_files, %w{config/database.yml}
-set :linked_files, %w{config/secrets.yml}
+set :linked_files, %w{config/database.yml config/secrets.yml}
 
 
 namespace :deploy do
