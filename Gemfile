@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'upmin-admin'
 gem 'sitemap_generator'
 gem 'sprockets', '2.12.3'
+gem 'redcarpet'
+gem 'bourbon'
 
 group :development, :test do
   gem 'byebug'

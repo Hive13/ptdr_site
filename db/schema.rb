@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820234556) do
+ActiveRecord::Schema.define(version: 20150829082743) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,5 +32,14 @@ ActiveRecord::Schema.define(version: 20150820234556) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "waiver_forms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "childname"
+  end
 
 end

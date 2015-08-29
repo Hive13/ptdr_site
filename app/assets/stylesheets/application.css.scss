@@ -10,6 +10,170 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+
+@import "bourbon/bourbon";
+@import "framework_and_overrides";
+@import "jquery.signaturepad";
+@import "pages";
+@import "scaffolds";
+@import "waiver_forms";
+
+
+
+
+$purple: #6E5BAA;
+$red: #E74C3C;
+$gray: #D1D1D6;
+
+$text-color: #2D2D2D;
+$highlight-color: $purple;
+$line-color: #CCC;
+
+@mixin button {
+  padding: 8px 24px;
+
+  -webkit-appearance: none;
+  background-color: $highlight-color;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  box-sizing: 1px;
+}
+.nda {
+  padding-bottom: 2em;
+
+  h1 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+
+    font-size: 2.5em;
+    font-weight: normal;
+    line-height: 1.5em;
+    text-align: center;
+
+    @media all and (max-width: 660px) {
+      line-height: 1em;
+    }
+  }
+
+  h1 + p {
+    margin-bottom: 3em;
+
+    color: $highlight-color;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+    text-align: center;
+
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+
+  p {
+    line-height: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  table {
+    margin: 2em 0;
+    width: 100%;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    td {
+      padding: 10px;
+      width: 50%;
+
+      border: 1px solid $line-color;
+      line-height: 1.5em;
+    }
+  }
+}
+
+form {
+  @include box-sizing(border-box);
+  margin-bottom: 4em;
+  padding: 10px;
+  overflow: hidden;
+
+  border: 1px solid $line-color;
+  border-radius: 3px;
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"], input[type="email"] {
+    @include box-sizing(border-box);
+    margin-bottom: 1em;
+    padding: 8px;
+    width: 100%;
+
+    @include transition(all 0.15s ease-in);
+    border-radius: 3px;
+    border: 1px solid $line-color;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.125em;
+    outline: none;
+
+    &:focus {
+      border-color: $highlight-color;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba($highlight-color, 0.5);
+    }
+  }
+
+  input[type="submit"] {
+    @include button;
+  }
+
+  .clearButton {
+    @include button;
+    background: $gray;
+  }
+
+  .sig {
+    position: relative;
+
+    &:before {
+      bottom: 14px;
+      display: block;
+      position: absolute;
+
+      color: $line-color;
+      content: "×";
+      font-size: 50px;
+    }
+  }
+
+  .error {
+    margin-bottom: 0.75em;
+
+    color: $red;
+  }
+}
+
+.thank-you {
+  margin: 5em 0;
+
+  text-align: center;
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+
+  a {
+    @include button;
+  }
+}

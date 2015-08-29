@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @waiver_form.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @waiver_form.email %>
+</p>
+
+<p>
+  <strong>Signature:</strong>
+  <%= @waiver_form.signature %>
+</p>
+
+<%= link_to 'Edit', edit_waiver_form_path(@waiver_form) %> |
+<%= link_to 'Back', waiver_forms_path %>

@@ -1,0 +1,20 @@
+<%= simple_form_for(@waiver_form) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, placeholder: 'Full Name', class: 'name', autocapitalize: 'words' %>
+    <%= f.input :email, placeholder: 'Email Address', class: 'email' %>
+    <div class="actions">
+      <a href="#clear" class="clearButton">Clear</a>
+      <%= f.submit value: "Submit", class: "button" %>
+    </div>
+    <div class="field">
+      <div class="sigWrapper">
+        <canvas class="pad" width="650" height="150"></canvas>
+        <%= f.hidden_field :signature, class: "output" %>
+      </div>
+    </div>
+    </div>
+
+
+<% end %>
