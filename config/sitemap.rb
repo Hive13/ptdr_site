@@ -2,6 +2,11 @@
 SitemapGenerator::Sitemap.default_host = "http://ptdr.hive13.net"
 
 SitemapGenerator::Sitemap.create do
+
+  HighVoltage.page_ids.each do |page|
+    add page, changefreq: 'weekly'
+  end
+
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
