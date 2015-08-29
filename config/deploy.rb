@@ -1,6 +1,12 @@
 set :application, 'pdtr_hive13_org'
 set :repo_url, 'git@github.com:Hive13/ptdr_site.git'
 set :deploy_to, '/var/www/ptdr.iwcg.net'
+set :bundle_dir, ''
+set :bundle_flags, '--deployment --quiet'
+set :rvm_type, :user
+set :rvm_ruby_version, 'ruby-2.1.2'
+set :bundle_roles, :all
+
 
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -17,6 +23,9 @@ set :deploy_to, '/var/www/ptdr.iwcg.net'
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # set :keep_releases, 5
+
+set :linked_files, %w{config/database.yml}
+
 
 namespace :deploy do
 
