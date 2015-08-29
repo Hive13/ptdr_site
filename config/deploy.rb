@@ -41,8 +41,6 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      print "Creating /tmp directory"
-      execute :mkdir,  release_path.join('tmp')
       execute :touch, release_path.join('tmp/restart.txt')
       execute :rake, 'sitemap:refresh'
     end
