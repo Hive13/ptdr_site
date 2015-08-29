@@ -25,8 +25,7 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       print "Creating /tmp directory"
-      run "mkdir -p tmp"
-
+      execute :mkdir,  release_path.join('tmp')
       execute :touch, release_path.join('tmp/restart.txt')
     end
   end
