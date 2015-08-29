@@ -19,6 +19,7 @@ gem 'sendgrid'
 gem 'simple_form'
 gem 'upmin-admin'
 gem 'sitemap_generator'
+gem 'sprockets', '2.12.3'
 
 group :development do
   gem 'better_errors'
