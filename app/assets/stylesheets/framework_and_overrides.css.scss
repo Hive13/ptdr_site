@@ -90,3 +90,15 @@ section {
   @extend .radius;
   @extend .tiny;
 }
+
+footer {
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-text {
+  font-size: 10px;
+  font-color: gray;
+}

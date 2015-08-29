@@ -2,10 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Ptdr" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Ptdr" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "" %> Power Tool Drag Racing</title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "" %> "Power Tool Drag Racing"">
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%# Modernizr is required for Zurb Foundation %>
     <%= javascript_include_tag 'vendor/modernizr' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -19,4 +18,9 @@
        <%= yield %>
     </main>
   </body>
+  <% if Rails.env.production? %>
+  <!--  MouseStats:Begin  -->
+  <script type="text/javascript">var MouseStats_Commands=MouseStats_Commands?MouseStats_Commands:[]; (function(){function b(){if(void 0==document.getElementById("__mstrkscpt")){var a=document.createElement("script");a.type="text/javascript";a.id="__mstrkscpt";a.src=("https:"==document.location.protocol?"https://ssl":"http://www2")+".mousestats.com/js/4/6/4698392299993376379.js?"+Math.floor((new Date).getTime()/6E5);a.async=!0;a.defer=!0;(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}}window.attachEvent?window.attachEvent("onload",b):window.addEventListener("load", b,!1);"complete"===document.readyState&&b()})(); </script>
+  <!--  MouseStats:End  -->
+  <% end %>
 </html>
