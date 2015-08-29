@@ -1,20 +1,25 @@
-Ptdr
+ptdr.hive13.org
 ================
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+This is the rails application that drives ptdr.hive13.org, and all of the public-facing components of power tool drag racing.
 
-Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
+While in it's infancy, this application's goal is to be the electronic nerve center and public-facing portal for all PTDR
+activities, including
+
+* Electronic signatures on waivers
+* Photo storage and delivery
+* Brackets
+* Racer Profiles
+* Much, much more (that we have yet to really determine what that is yet.)
+
 
 Problems? Issues?
 -----------
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+Need help? Want to develop something better?
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
+Bug iwilson in the hive13 channel on freenode.  Twist- can probably help as well.  
 
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
 
 Ruby on Rails
 -------------
@@ -24,10 +29,11 @@ This application requires:
 - Ruby 2.1.2
 - Rails 4.2.3
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 
 Getting Started
 ---------------
+
+Clone repository, run bundle install, pray everything works.
 
 Documentation and Support
 -------------------------
@@ -35,14 +41,19 @@ Documentation and Support
 Issues
 -------------
 
-Similar Projects
-----------------
-
 Contributing
 ------------
+
+No CLA required.  Find something, patch it, add your name to the credits, submit a pull request, and done.
+
 
 Credits
 -------
 
+* Ian Wilson (github: uid0, <http://ianwilson.org>)
+
+
 License
 -------
+
+This software is licensed under the AGPL 2.0.  Yes, AGPL.  Deal with it.  
