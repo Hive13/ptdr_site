@@ -12,6 +12,8 @@ activities, including
 * Racer Profiles
 * Much, much more (that we have yet to really determine what that is yet.)
 
+Ian Wilson and Ryan Hershey have access to the ptdr server, which is running on Ian's Digital Ocean account.  
+
 
 Problems? Issues?
 -----------

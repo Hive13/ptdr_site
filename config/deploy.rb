@@ -1,5 +1,7 @@
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'pdtr_hive13_org'
+set :repo_url, 'git@github.com:Hive13/ptdr_site.git'
+set :deploy_to, '/var/www/rails/ptdr_hive13_org'
+
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
