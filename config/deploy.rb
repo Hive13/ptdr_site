@@ -44,6 +44,7 @@ namespace :deploy do
       print "Creating /tmp directory"
       execute :mkdir,  release_path.join('tmp')
       execute :touch, release_path.join('tmp/restart.txt')
+      execute :rake, 'sitemap:refresh'
     end
   end
 
