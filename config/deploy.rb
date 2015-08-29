@@ -25,6 +25,7 @@ set :bundle_roles, :all
 # set :keep_releases, 5
 
 set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/secrets.yml}
 
 
 namespace :deploy do
