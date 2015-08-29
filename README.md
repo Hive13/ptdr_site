@@ -6,7 +6,7 @@ This is the rails application that drives ptdr.hive13.org, and all of the public
 While in it's infancy, this application's goal is to be the electronic nerve center and public-facing portal for all PTDR
 activities, including
 
-* Electronic signatures on waivers
+* Electronic signatures on waivers (Done: 8/29/2015 by IMW)
 * Photo storage and delivery
 * Brackets
 * Racer Profiles
