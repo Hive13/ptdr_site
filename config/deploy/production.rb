@@ -5,9 +5,9 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{deploy@example.com}
-role :web, %w{deploy@example.com}
-role :db,  %w{deploy@example.com}
+role :app, %w{deploy@ptdr.iwcg.net}
+role :web, %w{deploy@ptdr.iwcg.net}
+role :db,  %w{deploy@ptdr.iwcg.net}
 
 # Extended Server Syntax
 # ======================
