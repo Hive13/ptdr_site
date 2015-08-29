@@ -29,6 +29,14 @@ set :linked_files, %w{config/database.yml}
 
 namespace :deploy do
 
+  task :fix_absent_manifest_bug do
+    on roles(:web) do
+      within release_path do
+        execute :rm, release_path.join('public', fetch(:assets_prefix), '.sprockets-manifest-*')
+      end
+    end
+  end
+
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
